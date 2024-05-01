@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1900px;
+  margin: 0rem;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.navbar-links-container {
+  color: #f6f6f6;
+  margin-right: 60px;
+}
+
+.navbar-links-container a {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.navbar-social-media-icons  {
+color: #f6f6f6;
+margin-left: 20px;
+/* width: 12rem; */
+}
+.navbar-social-media-icons a {
+  margin: 15px;
+  font-size: 25px;
+}
+
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-logo{
+  padding: 30px;
+}
+
+/* @media (max-width: 600px) {
+
+  .home-bannerImage-container,
+  .about-background-image-container {
+    display: none;
+  }
+} */
+
+.home-container {
+  background-image: url("../src/Assets/fondst.png");
+  background-size: cover;
+    background-position: 50% 80%;
+    height: 100vh;
+    /* width: 100vw; */
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    /* top: 78rem; */
+    z-index: 2;
+}
+.tedy{
+  background-image: url("../src/Assets/teddy.png");
+  background-size: cover;
+  background-position: 50% 66%;
+  height: 88vh;
+  /* width: 93vw; */
+  position: relative;
+  z-index: 1;
+  /* margin-top: 11px; */
+  top: -65px;
+}
+/* RESPONSIVE */
+/* Extra Small Devices (Téléphones portables) : jusqu'à 576px */
+@media (max-width: 575px) {
+  /* Styles spécifiques pour les téléphones portables */
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 2rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1rem;
+      margin-left: 16px;
+    }
+  
+    .tedy {
+      /* margin-left: 130px; */
+    }
+}
+@media (min-width: 576px) and (max-width: 710px) {
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -37rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 5rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1rem;
+      margin-left: 16px;
+    }
+  
+    .tedy {
+      margin-left: 130px;
+    }
+}
+@media (min-width: 711px) and (max-width: 870px) {
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 7rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1rem;
+      margin-left: 16px;
+    }
+  
+    .tedy {
+      margin-left: 130px;
+    }
+}
+@media (min-width: 871px) and (max-width: 950px) {
+  /* Styles spécifiques pour les téléphones portables */
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 9rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1rem;
+      margin-left: 16px;
+    }
+        .tedy {
+          margin-left: 130px;
+        }
+}
+
+/* Small Devices (Tablettes) : de 577px à 768px */
+@media (min-width: 951px) and (max-width: 1070px) {
+  /* Styles spécifiques pour les tablettes */
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 9rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1.1rem;
+      margin-left: 16px;
+    }
+    .tedy{
+      margin-left: 130px;
+    }
+}
+
+/* Medium Devices (Ordinateurs portables) : de 769px à 992px */
+@media (min-width: 1071px) and (max-width: 1130px) {
+  /* Styles spécifiques pour les ordinateurs portables */
+  .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 11rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1.1rem;
+      margin-left: 16px;
+    }
+    .tedy {
+      margin-left: 100px;
+    }
+}
+
+/* Large Devices (Ordinateurs de bureau) : de 993px à 1200px */
+@media (min-width: 1131px) and (max-width: 1360px) {
+  /* Styles spécifiques pour les ordinateurs de bureau */
+  /* Styles spécifiques pour les grands écrans */
+    .tedy-banner {
+      z-index: 0;
+      position: relative;
+      top: -40rem;
+      left: 5rem;
+      color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 12rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1.2rem;
+      margin-left: 16px;
+    }
+        .tedy {
+          margin-left: 100px;
+        }
+}
+
+/* Extra Large Devices (Grands écrans) : à partir de 1201px */
+@media (min-width: 1361px) {
+  /* Styles spécifiques pour les grands écrans */
+  .tedy-banner {
+    z-index: 0;
+    position: relative;
+    top: -40rem;
+    left: 5rem;
+    color: #f6f6f6;
+    }
+  
+    .tedy-banner-h1 {
+      font-size: 15rem;
+      font-weight: 500;
+    }
+  
+    .tedy-banner span {
+      font-size: 1.5rem;
+      margin-left: 16px;
+    }
+}
+
+circle,
+rect,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.svg-container{
+  margin-right: 55px;
+  margin-top: 3px;
+}
+
+.Dates-container{
+  /* font-size: 50px; */
+  background-color: rgb(109, 109, 109);
+  /* max-height: 100vh; */
+  width: 99vw;
+  /* height: 100vh; */
+  background-image: url("../src/Assets/Desktop\ -\ 11.png");
+  background-size: cover;
+  background-position: 50% 66%;
+  position: relative;
+  /* top: 82rem; */
+  z-index: 2;
+  margin-top: 100vh;
+}
+
+.dates-banner{
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  color: #000;
+}
+
+.window {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #f6f6f6;
+}
+
+main {
+  user-select: none;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+}
+li {
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  user-select: none;
+  padding: 28px;
+  color: #f6f6f6;
+}
+li.selected {
+  /* background: #eeeeee00; */
+  color: #0d00ff;
+  text-shadow: 0 0 52px #1100ff, 0 0px 0 #1100ff, 0 0 50px #1100ff;
+}
+li button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: #000;
+  margin-left: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.combat{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+  color: #f6f6f6;
+      height: 85vh;
+}
+
+.blur-description{
+  width: 30rem;
+  height: 8rem;
+  background-color: #747BBF;
+  color: #000;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #f6f6f6;
+  margin-left: 40rem;
+  bottom: 5rem;
+  position: relative;
+  font-weight: 500;
+}
+.champion-image {
+      width: 790px;
+}
+.champion-image img {
+  width: 56rem;
+  height: 21rem;
+  transform: perspective(1500px) rotateY(24deg);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.combat-presentation{
+  padding: 0 40px 0 113px;
+}
+.logo-combat{
+  /* padding: 20px; */
+}
+.year-name-banner{
+
+}
+.year-banner{
+    position: relative;
+      width: 28rem;
+      font-size: 20rem;
+      font-family: Bebas Neue;
+      left: 38rem;
+      top: 12rem;
+      color: #806C51;
+      font-weight: 500;
+      z-index: 1;
+      font-weight: 600;
+      line-height: 1rem;
+}
+.name-banner{
+    width: 28rem;
+      position: relative;
+      left: 53rem;
+      top: 14rem;
+      z-index: 2;
+      font-weight: 700;
+      line-height: 36px;
+      color: #A1B0FF;
+      font-size: 44px;
+}

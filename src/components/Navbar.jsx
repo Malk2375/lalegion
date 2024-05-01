@@ -18,6 +18,7 @@ import { useState } from "react";
 import Logo from "../Assets/FRANCE_JUDO_LOGOTYPE_RVB_PRINCIPAL-BLEU 2_layerstyle.png"
 import Burger from "../Assets/Group973.png"
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom"
 
 
 const draw = {
@@ -120,10 +121,12 @@ const Navbar = () => {
       </motion.svg>
       <div className="navbar-links-container">
         <div className="navbar-menu-container">
-          <img src={Burger} style={{ cursor : "pointer"}} onClick={() => setOpenMenu(true)} />
+          <Link to="/login">
+          <button className='Connexion'>Connexion Admin</button>
+          </Link>
         </div>
       </div>
-      <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
+      {/* <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
         <Box
           sx={{ width: 250 }}
           role="presentation"
@@ -142,7 +145,7 @@ const Navbar = () => {
           </List>
           <Divider />
         </Box>
-      </Drawer>
+      </Drawer> */}
     </nav>
   )
 }

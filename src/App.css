@@ -36,7 +36,6 @@ nav {
 
 .navbar-links-container {
   color: #f6f6f6;
-  margin-right: 60px;
 }
 
 .navbar-links-container a {
@@ -262,7 +261,7 @@ nav {
     .tedy-banner {
       z-index: 0;
       position: relative;
-      top: -40rem;
+      bottom: 46rem;
       left: 5rem;
       color: #f6f6f6;
     }
@@ -287,7 +286,7 @@ nav {
   .tedy-banner {
     z-index: 0;
     position: relative;
-    top: -40rem;
+        bottom: 50rem;
     left: 5rem;
     color: #f6f6f6;
     }
@@ -320,7 +319,7 @@ line {
   /* font-size: 50px; */
   background-color: rgb(109, 109, 109);
   /* max-height: 100vh; */
-  width: 99vw;
+  width: 100vw;
   /* height: 100vh; */
   background-image: url("../src/Assets/Desktop\ -\ 11.png");
   background-size: cover;
@@ -336,6 +335,8 @@ line {
   justify-content: center;
   border-radius: 10px;
   color: #000;
+      position: relative;
+        bottom: 20px;
 }
 
 .window {
@@ -364,7 +365,7 @@ li {
 
 ul {
   display: flex;
-  width: 90%;
+  width: 80%;
 }
 li {
   border-radius: 5px;
@@ -477,30 +478,44 @@ li button {
 }
 
 .explorer{
-    height: 50px;
-      background-color: #0A0095;
-      width: 14rem;
-      color: wheat;
-      border-radius: 9px;
-      cursor: pointer;
-      border: none;
-      font-size: 20px;
-      position: relative;
-      top: 12rem;
+  height: 50px;
+  background-color: #0A0095;
+  width: 14rem;
+  color: wheat;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  position: relative;
+  top: 12rem;
+}
+.Connexion{
+  height: 80px;
+    background-color: #0A0095;
+    width: 12rem;
+    color: wheat;
+    border-radius: 9px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .Main{
-      height: 50px;
-        background-color: #0A0095;
-        width: 14rem;
-        color: wheat;
-        border-radius: 9px;
-        cursor: pointer;
-        border: none;
-        font-size: 20px;
-        
+  height: 50px;
+  background-color: #0A0095;
+  width: 10rem;
+      height: 45px;
+  color: wheat;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
 }
 .Main-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 10px;
 }

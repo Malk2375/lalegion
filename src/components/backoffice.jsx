@@ -6,9 +6,9 @@ import "../firebaseConfig"
 export default function MainView() {
   const [champions, setChampions] = useState([]);
   const [championData, setChampionData] = useState({
-    nom: '',
-    prenom: '',
-    age: '',
+    name: '',
+    year: '',
+    weight: '',
     description: ''
   });
   const [editingChampionId, setEditingChampionId] = useState(null);
@@ -37,33 +37,37 @@ export default function MainView() {
       console.log("Champion ajouté avec succès");
       // Réinitialiser les données du champion après l'ajout réussi
       setChampionData({
-        nom: '',
-        prenom: '',
-        age: '',
-        description: ''
+        name: '',
+        year: '',
+        weight: '',
+        description: '',
+        icon: ''
       });
     } catch (error) {
       console.error("Erreur lors de l'ajout du champion :", error);
     }
   };
 
+
   const handleEditChampion = (champion) => {
     setEditingChampionId(champion.id);
     setChampionData({
-      nom: champion.nom,
-      prenom: champion.prenom,
-      age: champion.age,
-      description: champion.description
+      name: champion.name,
+      year: champion.year,
+      weight: champion.weight,
+      description: champion.description,
+      icon: champion.icon
     });
   };
 
   const handleUpdateChampion = async () => {
     try {
       await updateDoc(doc(firestore, "champions", editingChampionId), {
-        nom: championData.nom,
-        prenom: championData.prenom,
-        age: championData.age,
-        description: championData.description
+        name: championData.name,
+        year: championData.year,
+        weight: championData.weight,
+        description: championData.description,
+        icon: championData.icon
       });
       console.log("Champion mis à jour avec succès");
       // Mettre à jour le tableau des champions après la mise à jour
@@ -71,10 +75,11 @@ export default function MainView() {
         if (champion.id === editingChampionId) {
           return {
             ...champion,
-            nom: championData.nom,
-            prenom: championData.prenom,
-            age: championData.age,
-            description: championData.description
+            name: championData.name,
+            year: championData.year,
+            weight: championData.weight,
+            description: championData.description,
+            icon: championData.icon
           };
         }
         return champion;
@@ -82,10 +87,11 @@ export default function MainView() {
       setChampions(updatedChampions);
       // Réinitialiser les données du champion après la mise à jour réussie
       setChampionData({
-        nom: '',
-        prenom: '',
-        age: '',
-        description: ''
+        name: '',
+        year: '',
+        weight: '',
+        description: '',
+        icon:''
       });
       setEditingChampionId(null);
     } catch (error) {
@@ -108,7 +114,7 @@ export default function MainView() {
     signOut(auth)
       .then(() => {
         console.log("Déconnexion réussie");
-        // Naviguer vers la page de connexion après la déconnexion
+        // Naviguer vers la pweight de connexion après la déconnexion
       })
       .catch((error) => {
         console.error("Erreur lors de la déconnexion :", error);
@@ -119,11 +125,11 @@ export default function MainView() {
     <>
       <div>AdminView</div>
       <form onSubmit={editingChampionId ? handleUpdateChampion : handleAddChampion}>
-        <input type="text" name="nom" value={championData.nom} onChange={handleInputChange} placeholder="Nom du champion" required />
-        <input type="text" name="prenom" value={championData.prenom} onChange={handleInputChange} placeholder="Prénom du champion" required />
-        <input type="number" name="age" value={championData.age} onChange={handleInputChange} placeholder="Âge du champion" required />
+        <input type="text" name="name" value={championData.name} onChange={handleInputChange} placeholder="name du champion" required />
+        <input type="text" name="year" value={championData.year} onChange={handleInputChange} placeholder="year du champion" required />
+        <input type="number" name="weight" value={championData.weight} onChange={handleInputChange} placeholder="weight du champion" required />
         <textarea name="description" value={championData.description} onChange={handleInputChange} placeholder="Description du champion" required />
-        <input type="url" name="url" value={championData.url} onChange={handleInputChange} placeholder="URL de l'image du champion" />
+        <input type="url" name="url" value={championData.icon} onChange={handleInputChange} placeholder="URL de l'icon du champion" />
         <button type="submit">{editingChampionId ? "Mettre à jour Champion" : "Ajouter Champion"}</button>
       </form>
       <button title='Déconnexion' onClick={handleSignOut}>Déconnexion</button>
@@ -131,20 +137,21 @@ export default function MainView() {
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Âge</th>
+            <th>name</th>
+            <th>year</th>
+            <th>weight</th>
             <th>Description</th>
-            <th>Actions</th>
+            <th>Icon</th>
           </tr>
         </thead>
         <tbody>
           {champions.map((champion) => (
             <tr key={champion.id}>
-              <td>{champion.nom}</td>
-              <td>{champion.prenom}</td>
-              <td>{champion.age}</td>
+              <td>{champion.name}</td>
+              <td>{champion.year}</td>
+              <td>{champion.weight}</td>
               <td>{champion.description}</td>
+              <td style={{width:"100px"}}>{champion.icon}</td>
               <td>
                 <button onClick={() => handleDeleteChampion(champion.id)}>Supprimer</button>
                 <button onClick={() => handleEditChampion(champion)}>Modifier</button>

@@ -47,12 +47,15 @@ nav {
   font-weight: 600;
 }
 .navbar-social-media-icons  {
-color: #f6f6f6;
-margin-left: 20px;
-/* width: 12rem; */
+    color: #f6f6f6;
+      margin-left: 60px;
+      top: 32rem;
+      position: relative;
+      width: 20rem;
+          z-index: 2;
 }
 .navbar-social-media-icons a {
-  margin: 15px;
+  margin: 15px 40px 15px 15px;
   font-size: 25px;
 }
 
@@ -96,12 +99,15 @@ margin-left: 20px;
   background-image: url("../src/Assets/teddy.png");
   background-size: cover;
   background-position: 50% 66%;
-  height: 88vh;
-  /* width: 93vw; */
-  position: relative;
-  z-index: 1;
-  /* margin-top: 11px; */
-  top: -65px;
+    height: 88vh;
+      /* width: 93vw; */
+      position: relative;
+      z-index: 1;
+      /* margin-top: 11px; */
+      display: flex;
+      justify-content: center;
+      top: -65px;
+      align-items: center;
 }
 /* RESPONSIVE */
 /* Extra Small Devices (Téléphones portables) : jusqu'à 576px */
@@ -358,7 +364,7 @@ li {
 
 ul {
   display: flex;
-  width: 100%;
+  width: 90%;
 }
 li {
   border-radius: 5px;
@@ -463,4 +469,38 @@ li button {
       line-height: 36px;
       color: #A1B0FF;
       font-size: 44px;
+}
+
+.circle-separator{
+  width: 20px;
+  cursor: auto;
+}
+
+.explorer{
+    height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+}
+.Main{
+      height: 50px;
+        background-color: #0A0095;
+        width: 14rem;
+        color: wheat;
+        border-radius: 9px;
+        cursor: pointer;
+        border: none;
+        font-size: 20px;
+        
+}
+.Main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

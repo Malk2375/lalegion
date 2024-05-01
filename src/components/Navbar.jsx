@@ -17,9 +17,6 @@ import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { useState } from "react";
 import Logo from "../Assets/FRANCE_JUDO_LOGOTYPE_RVB_PRINCIPAL-BLEU 2_layerstyle.png"
 import Burger from "../Assets/Group973.png"
-import { FaTiktok } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 
@@ -67,20 +64,6 @@ const Navbar = () => {
       <div className="nav-logo">
         <img src={Logo} alt="Logo" />
       </div>
-      {/* <div className="navbar-social-media-icons"> */}
-        {/* Instagram */}
-        {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}> */}
-          {/* <FaInstagram /> */}
-        {/* </a> */}
-        {/* YouTube */}
-        {/* <a href="https://www.youtube.com/watch?v=LCPyV5F4BS8&list=RDLCPyV5F4BS8&start_radio=1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}> */}
-          {/* <FaYoutube /> */}
-        {/* </a> */}
-        {/* TikTok */}
-        {/* <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}> */}
-          {/* <FaTiktok /> */}
-        {/* </a> */}
-      {/* </div> */}
       <motion.svg
       className="svg-container"
         width="150"

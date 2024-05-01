@@ -5,21 +5,12 @@ import Logo from "../Assets/FRANCE_JUDO_LOGOTYPE_RVB_PRINCIPAL-BLEU 2_layerstyle
 
 const Dates = () => {
   const [selectedChampion, setSelectedChampion] = useState(champions[0]);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 100) { // Changer 100 selon votre besoin
-  //       window.scrollTo({ top: 0, behavior: 'smooth' });
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <motion.section className='Dates-container'>
       <div className="window">
@@ -52,15 +43,22 @@ const Dates = () => {
           <div className='dates-banner'>
             <ul>
               {champions.map((champion, index) => (
-                <li
-                  key={index}
-                  className={champion === selectedChampion ? "selected" : ""}
-                  onClick={() => setSelectedChampion(champion)}
-                >
-                  {champion.year}
-                </li>
+                <React.Fragment key={index}>
+                  {index !== 0 && Array(3).fill().map((_, i) => (
+                    <li className="circle-separator" key={i}>•</li>
+                  ))}
+                  <li
+                    className={champion === selectedChampion ? "selected" : ""}
+                    onClick={() => setSelectedChampion(champion)}
+                  >
+                    {champion.year}
+                  </li>
+                </React.Fragment>
               ))}
             </ul>
+          </div>
+          <div className='Main-container'>
+          <button onClick={scrollToTop} className='Main'>Main</button>
           </div>
         </main>
       </div>

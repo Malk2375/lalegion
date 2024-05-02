@@ -336,7 +336,7 @@ line {
   border-radius: 10px;
   color: #000;
       position: relative;
-        bottom: 20px;
+        bottom: 43px;
 }
 
 .window {
@@ -417,7 +417,7 @@ li button {
 
 .blur-description{
   width: 30rem;
-  height: 8rem;
+  height: 9rem;
   background-color: #747BBF;
   color: #000;
   padding: 20px;
@@ -431,13 +431,49 @@ li button {
   font-family: "Outfit", sans-serif;
 }
 .champion-image {
-      width: 790px;
+  position: relative;
+  display: inline-block;
+  width: 790px;
+  /* Largeur spécifiée */
 }
+
 .champion-image img {
+  display: block;
   width: 56rem;
+  /* Largeur spécifiée */
   height: 21rem;
+  /* Hauteur spécifiée */
   transform: perspective(1500px) rotateY(24deg);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* Ajout d'une transition pour une animation fluide */
+}
+
+.champion-image:hover img {
+  transform: perspective(1500px) rotateY(0deg);
+  /* Réinitialisation de la transformation au survol */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  /* Réinitialisation de l'ombre au survol */
+  filter: blur(1px);
+}
+
+.champion-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.champion-image:hover .champion-info {
+  visibility: visible;
+  opacity: 1;
 }
 .combat-presentation{
   padding: 0 40px 0 113px;

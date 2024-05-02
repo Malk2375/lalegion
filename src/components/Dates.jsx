@@ -55,10 +55,11 @@ const Dates = () => {
               </div>
               <div style={{ marginBottom: '45px', width: '200px' }}>
                 <img src={Logo} alt='Logo' />
-              </div>
+              </div> 
               <div className='champion-image'>
                 <Link to={`/champion/${selectedChampion.id}`}>
                   <img src={selectedChampion.url} alt={selectedChampion.name} />
+                  <p style={{ fontFamily:"Bebas Neue", fontSize:"25px"}} className="champion-info">Voir le Champion</p>
                 </Link>
               </div>
               <p className='blur-description'>{selectedChampion.description}</p>

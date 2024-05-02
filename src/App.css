@@ -74,14 +74,6 @@ nav {
   padding: 30px;
 }
 
-/* @media (max-width: 600px) {
-
-  .home-bannerImage-container,
-  .about-background-image-container {
-    display: none;
-  }
-} */
-
 .home-container {
   background-image: url("../src/Assets/fondst.png");
   background-size: cover;
@@ -133,6 +125,15 @@ nav {
     .tedy {
       /* margin-left: 130px; */
     }
+    .Connexion{
+      width: 9rem;
+    }
+    .navbar-links-container a {
+      margin-right: 1rem;
+    }
+        .navbar-social-media-icons{
+          display: none;
+        }
 }
 @media (min-width: 576px) and (max-width: 710px) {
   .tedy-banner {
@@ -156,6 +157,12 @@ nav {
     .tedy {
       margin-left: 130px;
     }
+        .Connexion {
+          width: 12rem;
+        }
+                .navbar-links-container a {
+                  margin-right: 3rem;
+                }
 }
 @media (min-width: 711px) and (max-width: 870px) {
   .tedy-banner {
@@ -179,6 +186,12 @@ nav {
     .tedy {
       margin-left: 130px;
     }
+        .Connexion {
+          width: 12rem;
+        }
+                .navbar-links-container a {
+                  margin-right: 3rem;
+                }
 }
 @media (min-width: 871px) and (max-width: 950px) {
   /* Styles spécifiques pour les téléphones portables */
@@ -202,6 +215,12 @@ nav {
         .tedy {
           margin-left: 130px;
         }
+                .Connexion {
+                  width: 12rem;
+                }
+                                .navbar-links-container a {
+                                  margin-right: 3rem;
+                                }
 }
 
 /* Small Devices (Tablettes) : de 577px à 768px */
@@ -227,6 +246,12 @@ nav {
     .tedy{
       margin-left: 130px;
     }
+        .Connexion {
+          width: 12rem;
+        }
+                .navbar-links-container a {
+                  margin-right: 3rem;
+                }
 }
 
 /* Medium Devices (Ordinateurs portables) : de 769px à 992px */
@@ -252,6 +277,12 @@ nav {
     .tedy {
       margin-left: 100px;
     }
+        .Connexion {
+          width: 12rem;
+        }
+                .navbar-links-container a {
+                  margin-right: 3rem;
+                }
 }
 
 /* Large Devices (Ordinateurs de bureau) : de 993px à 1200px */
@@ -278,6 +309,12 @@ nav {
         .tedy {
           margin-left: 100px;
         }
+                .Connexion {
+                  width: 12rem;
+                }
+                                .navbar-links-container a {
+                                  margin-right: 3rem;
+                                }
 }
 
 /* Extra Large Devices (Grands écrans) : à partir de 1201px */
@@ -300,6 +337,12 @@ nav {
       font-size: 1.5rem;
       margin-left: 16px;
     }
+        .Connexion {
+          width: 12rem;
+        }
+                .navbar-links-container a {
+                  margin-right: 3rem;
+                }
 }
 
 circle,
@@ -529,7 +572,6 @@ li button {
 .Connexion {
   height: 60px;
   background-color: #0A0095;
-  width: 12rem;
   color: wheat;
   border-radius: 9px;
   cursor: pointer;

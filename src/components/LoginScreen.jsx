@@ -28,13 +28,20 @@ const LoginScreen = () => {
   return (
     <div style={styles.container}>
       <h1>LoginScreen</h1>
-      <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+      <div>
+        <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div>
+        <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+        <input style={{marginBottom:"30px"}} type="password" value={password} onChange={(e) => setPassword(e.target.value)} class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off"/>
+      </div>
       {loading ? (
         <div>Loading...</div>
       ) : (
         <>
-          <button onClick={signIn}>Connexion</button>
+            <button class="btn btn-primary" onClick={signIn}>Connexion</button>
         </>
       )}
     </div>

@@ -9,7 +9,11 @@ export default function MainView() {
     name: '',
     year: '',
     weight: '',
-    description: ''
+    description: '',
+    url:'',
+    Adversaire:'',
+    QUIEST:'',
+    LaFaceCache:'',
   });
   const [editingChampionId, setEditingChampionId] = useState(null);
   const auth = getAuth();
@@ -41,7 +45,10 @@ export default function MainView() {
         year: '',
         weight: '',
         description: '',
-        icon: ''
+        url: '',
+        Adversaire: '',
+        QUIEST: '',
+        LaFaceCache: '',
       });
     } catch (error) {
       console.error("Erreur lors de l'ajout du champion :", error);
@@ -56,7 +63,10 @@ export default function MainView() {
       year: champion.year,
       weight: champion.weight,
       description: champion.description,
-      icon: champion.icon
+      url: champion.url,
+      Adversaire: champion.Adversaire,
+      QUIEST: champion.QUIEST,
+      LaFaceCache: champion.LaFaceCache,
     });
   };
 
@@ -67,7 +77,10 @@ export default function MainView() {
         year: championData.year,
         weight: championData.weight,
         description: championData.description,
-        icon: championData.icon
+        url: championData.url,
+        Adversaire: championData.Adversaire,
+        QUIEST: championData.QUIEST,
+        LaFaceCache: championData.LaFaceCache,
       });
       console.log("Champion mis à jour avec succès");
       // Mettre à jour le tableau des champions après la mise à jour
@@ -79,7 +92,10 @@ export default function MainView() {
             year: championData.year,
             weight: championData.weight,
             description: championData.description,
-            icon: championData.icon
+            url: championData.url,
+            Adversaire: championData.Adversaire,
+            QUIEST: championData.QUIEST,
+            LaFaceCache: championData.LaFaceCache,
           };
         }
         return champion;
@@ -91,7 +107,10 @@ export default function MainView() {
         year: '',
         weight: '',
         description: '',
-        icon:''
+        url:'',
+        Adversaire: '',
+        QUIEST: '',
+        LaFaceCache: '',
       });
       setEditingChampionId(null);
     } catch (error) {
@@ -122,44 +141,51 @@ export default function MainView() {
   };
 
   return (
-    <>
-      <div>AdminView</div>
-      <form onSubmit={editingChampionId ? handleUpdateChampion : handleAddChampion}>
-        <input type="text" name="name" value={championData.name} onChange={handleInputChange} placeholder="name du champion" required />
-        <input type="text" name="year" value={championData.year} onChange={handleInputChange} placeholder="year du champion" required />
-        <input type="number" name="weight" value={championData.weight} onChange={handleInputChange} placeholder="weight du champion" required />
-        <textarea name="description" value={championData.description} onChange={handleInputChange} placeholder="Description du champion" required />
-        <input type="url" name="url" value={championData.icon} onChange={handleInputChange} placeholder="URL de l'icon du champion" />
-        <button type="submit">{editingChampionId ? "Mettre à jour Champion" : "Ajouter Champion"}</button>
+    <div className='Wraping'>
+      <div style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column", }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", width: "64rem", marginBottom: "30px" }}>
+          <h1>La legion Administration</h1>
+          <button className='btn btn-danger' style={{ margin: "20px" }} title='Déconnexion' onClick={handleSignOut}>Déconnexion</button>
+        </div>
+      <form style={{width:"50vw" , display:"flex", justifyContent:"center", flexDirection:"column", alignItems:"center" }} onSubmit={editingChampionId ? handleUpdateChampion : handleAddChampion}>
+          <input style={{ marginBottom: "20px" }} type="text" className='form-control' name="name" value={championData.name} onChange={handleInputChange} placeholder="name du champion" required />
+          <input style={{ marginBottom: "20px" }} type="text" className='form-control' name="year" value={championData.year} onChange={handleInputChange} placeholder="year du champion" required />
+          <input style={{ marginBottom: "20px" }} type="number" className='form-control' name="weight" value={championData.weight} onChange={handleInputChange} placeholder="weight du champion" required />
+          <textarea style={{ marginBottom: "20px" }} name="description" className='form-control' value={championData.description} onChange={handleInputChange} placeholder="Description du champion" required />
+        <input style={{marginBottom:"20px"}} type="url" name="url" className='form-control' value={championData.url} onChange={handleInputChange} placeholder="URL de l'icon du champion" />
+          <textarea style={{ marginBottom: "20px" }} name="Adversaire" className='form-control' value={championData.Adversaire} onChange={handleInputChange} placeholder="Adversaire du champion" />
+          <textarea style={{ marginBottom: "20px" }} name="QUIEST" className='form-control' value={championData.QUIEST} onChange={handleInputChange} placeholder="QUIEST ce champion" />
+          <textarea style={{ marginBottom: "20px" }} name="LaFaceCache" className='form-control' value={championData.LaFaceCache} onChange={handleInputChange} placeholder="La Face Caché du combat" />
+        <button className='btn btn-info' type="submit">{editingChampionId ? "Mettre à jour Champion" : "Ajouter Champion"}</button>
       </form>
-      <button title='Déconnexion' onClick={handleSignOut}>Déconnexion</button>
-
-      <table>
+      </div>
+      <table style={{fontSize:"0.8rem"}} class='table table-hover mt-4'>
         <thead>
-          <tr>
-            <th>name</th>
-            <th>year</th>
-            <th>weight</th>
-            <th>Description</th>
-            <th>Icon</th>
+          <tr class="table-primary">
+            <th scope="col">name</th>
+            <th scope="col">year</th>
+            <th scope="col">weight</th>
+            <th scope="col">Description</th>
+            <th scope="col">Url Icon</th>
+            <th scope="col">Admin</th>
           </tr>
         </thead>
         <tbody>
           {champions.map((champion) => (
             <tr key={champion.id}>
-              <td>{champion.name}</td>
+              <td >{champion.name}</td>
               <td>{champion.year}</td>
               <td>{champion.weight}</td>
               <td>{champion.description}</td>
-              <td style={{width:"100px"}}>{champion.icon}</td>
+              <td >{champion.url}</td>
               <td>
-                <button onClick={() => handleDeleteChampion(champion.id)}>Supprimer</button>
-                <button onClick={() => handleEditChampion(champion)}>Modifier</button>
+                <button className='btn btn-danger' style={{marginBottom:"20px"}}  onClick={() => handleDeleteChampion(champion.id)}>Supprimer</button>
+                <button className='btn btn-warning' onClick={() => handleEditChampion(champion)}>Modifier</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }

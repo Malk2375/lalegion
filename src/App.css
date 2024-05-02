@@ -286,7 +286,7 @@ nav {
   .tedy-banner {
     z-index: 0;
     position: relative;
-        bottom: 46rem;
+    bottom: 46rem;
     left: 5rem;
     color: #f6f6f6;
     }
@@ -428,6 +428,7 @@ li button {
   bottom: 5rem;
   position: relative;
   font-weight: 500;
+  font-family: "Outfit", sans-serif;
 }
 .champion-image {
       width: 790px;
@@ -489,17 +490,37 @@ li button {
   position: relative;
   top: 12rem;
 }
-.Connexion{
-  height: 80px;
-    background-color: #0A0095;
-    width: 12rem;
-    color: wheat;
-    border-radius: 9px;
-    cursor: pointer;
-    border: none;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+.Connexion {
+  height: 60px;
+  background-color: #0A0095;
+  width: 12rem;
+  color: wheat;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  /* Ajout de position relative */
+  overflow: hidden;
+  /* Masquage du texte débordant */
+}
+
+.Connexion::before {
+  content: 'Connexion';
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  /* Ajout de la transition */
+  /* transform: translateY(-100%); */
+}
+
+.Connexion:hover::before {
+  content: 'ADMIN';
+  /* Changement de texte au survol */
+  transform: translateY(0);
+  /* Animation de transition */
 }
 .Main{
   height: 50px;

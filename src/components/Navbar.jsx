@@ -122,30 +122,11 @@ const Navbar = () => {
       <div className="navbar-links-container">
         <div className="navbar-menu-container">
           <Link to="/login">
-          <button className='Connexion'>Connexion Admin</button>
+          <button className='Connexion'></button>
           </Link>
         </div>
       </div>
-      {/* <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={() => setOpenMenu(false)}
-          onKeyDown={() => setOpenMenu(false)}
-        >
-          <List>
-            {menuOptions.map((item) => (
-              <ListItem key={item.text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-        </Box>
-      </Drawer> */}
+
     </nav>
   )
 }

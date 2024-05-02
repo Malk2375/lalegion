@@ -1,0 +1,105 @@
+.champion-page{
+  background-color: blanchedalmond;
+}
+.champion-container{
+  min-height: 100vh;
+    width: 100vw;
+    max-width: 1900px;
+    margin: 0rem;
+    overflow-x: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* background-image: url("../src/Assets/1200x680_maxnewsworldfive268817.jpg"); */
+  /* background-size: cover; */
+  /* height: 65vh; */
+  /* border-radius: 20px; */
+}
+.champions-combat {
+  position: relative;
+  height: 65vh;
+  border-radius: 20px;
+}
+
+.champions-combat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/Assets/1200x680_maxnewsworldfive268817.jpg");
+  background-size: cover;
+  border-radius: inherit;
+  filter: blur(8px);
+  /* Ajoute un flou de 8 pixels uniquement à l'arrière-plan */
+  z-index: 0;
+  /* Place le pseudo-élément derrière le contenu */
+}
+
+.champion-name,
+.combatYear,
+.vs {
+  position: relative;
+  /* Assurez-vous que le texte reste au-dessus du pseudo-élément flou */
+  z-index: 1;
+  /* Autres styles du texte */
+}
+.champion-name{
+font-weight: 600;
+  /* color: black; */
+  width: 43rem;
+  padding: 3px;
+  font-size: 80px;
+}
+
+.combatYear{
+  font-size: 50px;
+  font-weight: 600;
+  width: 22rem;
+  padding: 3px;
+}
+.QUIEST{
+      font-size: 150px;
+        position: relative;
+        bottom: 5rem;
+        width: 58rem;
+        z-index: 1;
+        text-transform: uppercase;
+}
+.image1{
+      width: 100vw;
+        height: 30rem;
+        position: relative;
+        bottom: 8rem;
+        z-index: 0;
+}
+.texte1{
+    position: relative;
+      width: 50vw;
+      left: 43rem;
+      bottom: 15rem;
+      font-size: 25px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 26px;
+}
+.video{
+  width: 100vw;
+    position: relative;
+    bottom: 10rem;
+}
+.texteLaFace{
+    width: 36rem;
+      position: relative;
+      bottom: 19rem;
+      left: 54rem;
+      font-size: 25px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 26px;
+    }
+.video2 {
+  width: 100vw;
+    position: relative;
+    bottom: 10rem;
+}

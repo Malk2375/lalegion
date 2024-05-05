@@ -38,6 +38,9 @@ const Dates = () => {
       <div className="window">
         <main>
           <div className='Main-container'>
+            <div style={{ width: '200px', margin:'20px 20px 20px 30px' }}>
+              <img src={Logo} alt='Logo' />
+            </div> 
             <button onClick={scrollToTop} className='Main'>Retourner</button>
           </div>
           {selectedChampion && (
@@ -49,13 +52,9 @@ const Dates = () => {
               transition={{ duration: 1 }}
               className='combat-presentation'
             >
-              <div className='year-name-banner'>
                 <div className='year-banner'>{selectedChampion.year}</div>
                 <h1 className='name-banner'>{selectedChampion.name}</h1>
-              </div>
-              <div style={{ marginBottom: '45px', width: '200px' }}>
-                <img src={Logo} alt='Logo' />
-              </div> 
+              
               <div className='champion-image'>
                 <Link to={`/champion/${selectedChampion.id}`}>
                   <img src={selectedChampion.url} alt={selectedChampion.name} />

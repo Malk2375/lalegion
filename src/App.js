@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import Page from './Page.jsx';
+import Page from './components/Page.jsx';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginScreen from './components/LoginScreen.jsx';
 import MainView from './components/backoffice.jsx';
-import ChampionPage from './champion.jsx'; // Importer ChampionPage
+import ChampionPage from './components/champion.jsx'; // Importer ChampionPage
 
 function App() {
   const ref = useRef(null);

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { collection, doc, getDoc } from 'firebase/firestore';
-import { db } from './firebaseConfig'; // Assurez-vous d'importer votre configuration Firebase
+import { db } from '../firebaseConfig'; // Assurez-vous d'importer votre configuration Firebase
 import './champion.css'
-
-import video2 from './Assets/1200x680_maxnewsworldfive268817.jpg';
+import video2 from '../Assets/1200x680_maxnewsworldfive268817.jpg';
 
 const ChampionPage = () => {
   const { id } = useParams(); // Récupérer l'ID du champion depuis l'URL

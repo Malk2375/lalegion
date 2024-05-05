@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Home from "./components/Home.jsx";
-import Dates from "./components/Dates.jsx";
-import { motion, useScroll, useTransform } from "framer-motion";
-import './App.css';
+import Home from "./Home.jsx";
+import Dates from "./Dates.jsx";
+import '../App.css';
 const Page = () => {
   return (
     <div className="App">

@@ -6,6 +6,7 @@ import { FaTiktok } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 const Home = () => {
+  
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -13,7 +14,8 @@ const Home = () => {
     });
   };
   return (
-<motion.section className="home-container">
+    <motion.section  className="home-container">
+      
       <Navbar />
       <div className="navbar-social-media-icons">
         {/* Instagram */}

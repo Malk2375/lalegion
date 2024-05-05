@@ -104,6 +104,56 @@ nav {
 /* Extra Small Devices (Téléphones portables) : jusqu'à 576px */
 @media (min-width: 300px) and (max-width: 575px){
   /* Styles spécifiques pour les téléphones portables */
+
+  .Connexion {
+    height: 50px;
+    background-color: #0A0095;
+    color: wheat;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .navbar-links-container a {
+    margin-right: 1rem;
+  }
+  .navbar-links-container {
+    width: 134px;
+  }
+  .navbar-social-media-icons{
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100px;
+    padding-top: 36px;
+  }
+  .nav-logo {
+    padding: 0px;
+  }
+  .svg-container {
+    display: none;
+  }
+    .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 17rem;
+    }
+  .tedy{
+        top: 7px;
+  }
   .tedy-banner {
       z-index: 0;
       position: relative;
@@ -120,19 +170,6 @@ nav {
     .tedy-banner span {
       font-size: 1rem;
       margin-left: 16px;
-    }
-  
-    .tedy {
-      /* margin-left: 130px; */
-    }
-    .Connexion{
-      width: 9rem;
-    }
-    .navbar-links-container a {
-      margin-right: 1rem;
-    }
-    .navbar-social-media-icons{
-      display: none;
     }
     .year-banner {
       position: relative;
@@ -206,6 +243,21 @@ nav {
       border: none;
       font-size: 18px;
       margin: 0px 30px 0px 0px;
+    }
+    .progressbar {
+      top: 15rem;
+      left: 23.5rem;
+      bottom: 0;
+      width: 8px;
+      height: 20rem;
+    }
+
+    .progress-container {
+      top: 15rem;
+      left: 23.5rem;
+      bottom: 0;
+      width: 8px;
+      height: 20rem;
     }
 }
 @media (min-width: 576px) and (max-width: 710px) {
@@ -291,8 +343,47 @@ nav {
     .dates-banner li {
       padding: 18px;
     }
+        .explorer {
+          height: 50px;
+          background-color: #0A0095;
+          width: 14rem;
+          color: wheat;
+          border-radius: 9px;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          position: relative;
+          top: 12rem;
+        }
+        .progressbar {
+          top: 15rem;
+          left: 33.5rem;
+          bottom: 0;
+          width: 8px;
+          height: 20rem;
+        }
+
+        .progress-container {
+          top: 15rem;
+          left: 33.5rem;
+          bottom: 0;
+          width: 8px;
+          height: 20rem;
+        }
 }
 @media (min-width: 711px) and (max-width: 870px) {
+  .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+    }
   .tedy-banner {
       z-index: 0;
       position: relative;
@@ -372,6 +463,21 @@ nav {
     }
     .dates-banner li {
       padding: 20px;
+    }
+    .progressbar {
+      top: 15rem;
+      left: 42.5rem;
+      bottom: 0;
+      width: 8px;
+      height: 20rem;
+    }
+
+    .progress-container {
+      top: 15rem;
+      left: 42.5rem;
+      bottom: 0;
+      width: 8px;
+      height: 20rem;
     }
 }
 @media (min-width: 871px) and (max-width: 950px) {
@@ -457,11 +563,50 @@ nav {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+        .explorer {
+          height: 50px;
+          background-color: #0A0095;
+          width: 14rem;
+          color: wheat;
+          border-radius: 9px;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          position: relative;
+          top: 12rem;
+        }
+    .progressbar {
+      top: 15rem;
+      left: 52.5rem;
+      bottom: 0;
+      width: 8px;
+      height: 20rem;
+    }
+
+    .progress-container {
+        top: 15rem;
+          left: 52.5rem;
+          bottom: 0;
+          width: 8px;
+          height: 20rem;
+    }
 }
 
 /* Small Devices (Tablettes) : de 577px à 768px */
 @media (min-width: 951px) and (max-width: 1070px) {
   /* Styles spécifiques pour les tablettes */
+  .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+    }
   .tedy-banner {
       z-index: 0;
       position: relative;
@@ -541,11 +686,38 @@ nav {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+    .progressbar {
+      top: 15rem;
+      left: 57rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
+
+    .progress-container {
+      top: 15rem;
+      left: 57rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
 }
 
 /* Medium Devices (Ordinateurs portables) : de 769px à 992px */
 @media (min-width: 1071px) and (max-width: 1130px) {
   /* Styles spécifiques pour les ordinateurs portables */
+  .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+    }
   .tedy-banner {
       z-index: 0;
       position: relative;
@@ -625,12 +797,39 @@ nav {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+    .progressbar {
+      top: 15rem;
+      left: 64rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
+
+    .progress-container {
+      top: 15rem;
+      left: 64rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
 }
 
 /* Large Devices (Ordinateurs de bureau) : de 993px à 1200px */
 @media (min-width: 1131px) and (max-width: 1360px) {
   /* Styles spécifiques pour les ordinateurs de bureau */
   /* Styles spécifiques pour les grands écrans */
+  .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+    }
     .tedy-banner {
       z-index: 0;
       position: relative;
@@ -710,11 +909,38 @@ nav {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+    .progressbar {
+      top: 15rem;
+      left: 68rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
+
+    .progress-container {
+      top: 15rem;
+      left: 68rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
 }
 
 /* Extra Large Devices (Grands écrans) : à partir de 1201px */
 @media (min-width: 1361px) {
   /* Styles spécifiques pour les grands écrans */
+  .explorer {
+      height: 50px;
+      background-color: #0A0095;
+      width: 14rem;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      top: 12rem;
+    }
   .tedy-banner {
     z-index: 0;
     position: relative;
@@ -791,8 +1017,45 @@ nav {
     color: #A1B0FF;
     font-size: 44px;
   }
+    .progressbar {
+      top: 15rem;
+      left: 83rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+    }
+  
+    .progress-container {
+      top: 15rem;
+      left: 83rem;
+      bottom: 0;
+      width: 10px;
+      height: 20rem;
+      /* Couleur de fond grise */
+      z-index: 1;
+      border-radius: 32px;
+      /* Assurez-vous que le conteneur est en arrière-plan */
+    }
+}
+.progressbar {
+  transform-origin: 100% 0%;
+  position: fixed;
+  bottom: 0;
+  background: #0016E0;
+  transform: scaleY(0);
+  z-index: 2;
+  border-radius: 32px;
 }
 
+.progress-container {
+  position: fixed;
+  bottom: 0;
+  background: #ccc;
+  /* Couleur de fond grise */
+  z-index: 1;
+  border-radius: 32px;
+  /* Assurez-vous que le conteneur est en arrière-plan */
+}
 circle,
 rect,
 line {
@@ -950,18 +1213,6 @@ li button {
   cursor: auto;
 }
 
-.explorer{
-  height: 50px;
-  background-color: #0A0095;
-  width: 14rem;
-  color: wheat;
-  border-radius: 9px;
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
-  position: relative;
-  top: 12rem;
-}
 .Connexion {
   height: 60px;
   background-color: #0A0095;

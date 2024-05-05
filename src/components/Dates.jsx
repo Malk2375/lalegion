@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig'; 
 import Logo from '../Assets/FRANCE_JUDO_LOGOTYPE_RVB_PRINCIPAL-BLEU 2_layerstyle.png';
@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 const Dates = () => {
   const [selectedChampion, setSelectedChampion] = useState(null);
   const [champions, setChampions] = useState([]); // État pour stocker les champions récupérés
+  const { scrollY, scrollYProgress } = useScroll();
+  
 
   useEffect(() => {
     const fetchChampions = async () => {
@@ -32,9 +34,18 @@ const Dates = () => {
       behavior: 'smooth'
     });
   };
+  const initialProgressBarHeight = '50%'; // Hauteur initiale à 50%
+  const finalProgressBarHeight = useTransform(scrollY, [0, document.body.scrollHeight], ['50%', '100%']);
 
   return (
     <motion.section className='Dates-container'>
+      <div className='progress-container'>
+        <motion.div
+        className="progressbar"
+          style={{
+            scaleY: scrollYProgress
+          }}/>
+      </div>
       <div className="window">
         <main>
           <div className='Main-container'>

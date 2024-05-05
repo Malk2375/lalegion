@@ -171,7 +171,8 @@ nav {
 
     .name-banner {
       top: 1rem;
-      width: 10rem;
+      width: 17rem;
+      text-align: center;
       position: relative;
       z-index: 2;
       font-weight: 700;
@@ -187,7 +188,7 @@ nav {
     }
 
     .dates-banner li {
-      padding: 12px;
+      padding: 10px;
       flex: auto;
     }
     .Main-container{

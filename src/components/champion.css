@@ -42,9 +42,10 @@
   color: #fff;
 }
 .champions-combat span{
-  font-size: 24px;
-  color: #fff;
+font-size: 25px;
+  color: #000000;
   text-align: center;
+  font-weight: 800;
 }
 
 .QUIEST {
@@ -715,7 +716,7 @@ bottom: 27rem;
     }
   
     .section-quiest {
-      height: 185vh;
+      height: 100vh;
     }
   
     .Face {
@@ -733,13 +734,15 @@ font-size: 63px;
     }
   
     .video {
-width: 20rem;
+      width: 20rem;
       margin: -5rem auto 10rem auto;
     }
   
     .video-miniature {
       border-radius: 54px;
       height: 20rem;
+      position: relative;
+      z-index: 1;
     }
   
     .video2 {

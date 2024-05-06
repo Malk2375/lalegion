@@ -242,11 +242,11 @@ nav {
       cursor: pointer;
       border: none;
       font-size: 18px;
-      margin: 0px 30px 0px 0px;
+      margin: 0px 0px 0px 0px;
     }
     .progressbar {
       top: 15rem;
-      left: 23.5rem;
+      left: 23rem;
       bottom: 0;
       width: 8px;
       height: 20rem;
@@ -254,7 +254,7 @@ nav {
 
     .progress-container {
       top: 15rem;
-      left: 23.5rem;
+      left: 23rem;
       bottom: 0;
       width: 8px;
       height: 20rem;
@@ -288,6 +288,18 @@ nav {
     .navbar-links-container a {
       margin-right: 3rem;
     }
+        .Main {
+          height: 50px;
+          background-color: #0A0095;
+          width: 10rem;
+          height: 45px;
+          color: wheat;
+          border-radius: 9px;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          margin: 20px 30px 20px 20px;
+        }
     .year-banner {
       position: relative;
       font-size: 10rem;
@@ -411,6 +423,18 @@ nav {
     .navbar-links-container a {
       margin-right: 3rem;
     }
+        .Main {
+          height: 50px;
+          background-color: #0A0095;
+          width: 10rem;
+          height: 45px;
+          color: wheat;
+          border-radius: 9px;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          margin: 20px 30px 20px 20px;
+        }
     .year-banner {
     position: relative;
     font-size: 10rem;
@@ -508,6 +532,18 @@ nav {
     .navbar-links-container a {
     margin-right: 3rem;
     }
+        .Main {
+          height: 50px;
+          background-color: #0A0095;
+          width: 10rem;
+          height: 45px;
+          color: wheat;
+          border-radius: 9px;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          margin: 20px 30px 20px 20px;
+        }
     .year-banner {
       position: relative;
       width: 28rem;
@@ -595,6 +631,18 @@ nav {
 /* Small Devices (Tablettes) : de 577px à 768px */
 @media (min-width: 951px) and (max-width: 1070px) {
   /* Styles spécifiques pour les tablettes */
+  .Main {
+      height: 50px;
+      background-color: #0A0095;
+      width: 10rem;
+      height: 45px;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      margin: 20px 30px 20px 20px;
+    }
   .explorer {
       height: 50px;
       background-color: #0A0095;
@@ -706,6 +754,18 @@ nav {
 /* Medium Devices (Ordinateurs portables) : de 769px à 992px */
 @media (min-width: 1071px) and (max-width: 1130px) {
   /* Styles spécifiques pour les ordinateurs portables */
+  .Main {
+      height: 50px;
+      background-color: #0A0095;
+      width: 10rem;
+      height: 45px;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      margin: 20px 30px 20px 20px;
+    }
   .explorer {
       height: 50px;
       background-color: #0A0095;
@@ -818,6 +878,18 @@ nav {
 @media (min-width: 1131px) and (max-width: 1360px) {
   /* Styles spécifiques pour les ordinateurs de bureau */
   /* Styles spécifiques pour les grands écrans */
+  .Main {
+      height: 50px;
+      background-color: #0A0095;
+      width: 10rem;
+      height: 45px;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      margin: 20px 30px 20px 20px;
+    }
   .explorer {
       height: 50px;
       background-color: #0A0095;
@@ -929,6 +1001,18 @@ nav {
 /* Extra Large Devices (Grands écrans) : à partir de 1201px */
 @media (min-width: 1361px) {
   /* Styles spécifiques pour les grands écrans */
+  .Main {
+      height: 50px;
+      background-color: #0A0095;
+      width: 10rem;
+      height: 45px;
+      color: wheat;
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      margin: 20px 30px 20px 20px;
+    }
   .explorer {
       height: 50px;
       background-color: #0A0095;
@@ -1244,18 +1328,7 @@ li button {
   transform: translateY(0);
   /* Animation de transition */
 }
-.Main{
-  height: 50px;
-  background-color: #0A0095;
-  width: 10rem;
-  height: 45px;
-  color: wheat;
-  border-radius: 9px;
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
-  margin: 20px 30px 20px 20px;
-}
+
 .Main-container {
   display: flex;
     justify-content: space-between;
